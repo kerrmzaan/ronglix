@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://ronglix.com/</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ronglix.com/"/>
+        <image:image>
+            <image:loc>https://ronglix.com/images/generated/banner-tech.png</image:loc>
+            <image:title>Ronglix — Local-First Software Studio</image:title>
+            <image:caption>UK-based software studio engineering calm, secure, local-first apps.</image:caption>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://ronglix.com/services.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ronglix.com/services.html"/>
+    </url>
+    <url>
+        <loc>https://ronglix.com/advantages.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ronglix.com/advantages.html"/>
+    </url>
+    <url>
+        <loc>https://ronglix.com/news.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ronglix.com/news.html"/>
+    </url>
+    <url>
+        <loc>https://ronglix.com/contact.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ronglix.com/contact.html"/>
+    </url>
+    <url>
+        <loc>https://ronglix.com/privacy.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ronglix.com/privacy.html"/>
+    </url>
+    <url>
+        <loc>https://ronglix.com/terms.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ronglix.com/terms.html"/>
+    </url>
+</urlset>

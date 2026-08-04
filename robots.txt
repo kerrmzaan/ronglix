@@ -1,0 +1,67 @@
+# robots.txt — Ronglix.com
+# https://ronglix.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /*?*
+
+# Crawl-delay (be gentle — we're a small studio)
+Crawl-delay: 1
+
+# AI training crawlers — opt out by default
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Major search engines — fully allowed
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Sitemap
+Sitemap: https://ronglix.com/sitemap.xml
+
+# Host
+Host: https://ronglix.com

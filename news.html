@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>News & Dispatches — Ronglix · Engineering Notes & Product Updates</title>
+    <meta name="description" content="Engineering notes, design fragments, and product updates from the Ronglix studio. Read about our privacy research, procedural audio work, and product launches.">
+    <meta name="keywords" content="ronglix news, software studio blog, engineering notes, privacy research, indie studio updates">
+    <meta name="author" content="Ronglix">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#05060a">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ronglix.com/news.html">
+    <meta property="og:title" content="News & Dispatches — Ronglix">
+    <meta property="og:description" content="Engineering notes, design fragments, and product updates.">
+    <meta property="og:image" content="https://ronglix.com/images/generated/banner-tech.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Ronglix">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="News & Dispatches — Ronglix">
+    <meta name="twitter:description" content="Engineering notes, design fragments, and product updates.">
+
+    <link rel="canonical" href="https://ronglix.com/news.html">
+    <link rel="alternate" hreflang="en" href="https://ronglix.com/news.html">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Blog",
+        "name":"Ronglix Dispatches",
+        "url":"https://ronglix.com/news.html",
+        "publisher":{"@type":"Organization","name":"Ronglix","url":"https://ronglix.com"}
+    }
+    </script>
+</head>
+<body>
+    <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:0;background:#00f0ff;color:#05060a;padding:8px 14px;z-index:9999;">Skip to content</a>
+
+    <div class="loader" aria-hidden="true">
+        <div class="loader-inner">
+            <img class="loader-logo" src="images/logo.svg" alt="">
+            <div class="loader-text">loading dispatches</div>
+        </div>
+    </div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="index.html" class="brand" aria-label="Ronglix home">
+                <img class="brand-logo" src="images/logo.svg" alt="">
+                <span class="brand-text">
+                    <span class="brand-name">RONGLIX</span>
+                    <span class="brand-tag">// systems.online</span>
+                </span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="services.html">Services</a>
+                <a class="nav-link" href="advantages.html">Team</a>
+                <a class="nav-link" href="news.html">News</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="btn btn-outline nav-cta" href="contact.html">
+                    <svg width="16" height="16" aria-hidden="true"><use href="images/icons/sprite.svg#i-zap"/></svg>
+                    Start a project
+                </a>
+            </nav>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <svg class="icon-open" width="22" height="22" aria-hidden="true"><use href="images/icons/sprite.svg#i-menu"/></svg>
+                <svg class="icon-close" width="22" height="22" aria-hidden="true" style="display:none"><use href="images/icons/sprite.svg#i-close"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main" class="page-fade-in">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="hero-bg" aria-hidden="true" style="opacity:0.5">
+                <canvas id="hero-network"></canvas>
+                <div class="hero-orb hero-orb-2"></div>
+                <div class="hero-orb hero-orb-3"></div>
+            </div>
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="sep">/</span>
+                    <span>News</span>
+                </div>
+                <span class="section-eyebrow">// dispatches</span>
+                <h1>From the <span class="text-gradient">lab notebook</span></h1>
+                <p>
+                    Engineering notes, design fragments, and product updates from the Ronglix studio.
+                    Long-form essays on the work that doesn't fit in a release note.
+                </p>
+            </div>
+        </section>
+
+        <!-- CATEGORY FILTER -->
+        <section class="section-sm" style="border-bottom:1px solid var(--border-soft);">
+            <div class="container">
+                <div class="tabs-nav" role="tablist" style="justify-content:center;border:none;margin:0;">
+                    <button class="tab-btn active" data-tab="all">All</button>
+                    <button class="tab-btn" data-tab="engineering">Engineering</button>
+                    <button class="tab-btn" data-tab="privacy">Privacy</button>
+                    <button class="tab-btn" data-tab="design">Design</button>
+                    <button class="tab-btn" data-tab="product">Product</button>
+                    <button class="tab-btn" data-tab="studio">Studio</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED ARTICLE -->
+        <section class="section">
+            <div class="container">
+                <article class="news-card reveal" style="max-width:920px;margin:0 auto;">
+                    <a href="#article-1" class="news-thumb" style="aspect-ratio:21/9;">
+                        <img src="images/generated/banner-tech.png" alt="Procedural audio featured article" loading="lazy">
+                    </a>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="tag">Engineering · Featured</span>
+                            <span>· 2026-07-22</span>
+                            <span>· 8 min read</span>
+                        </div>
+                        <h3 style="font-size:1.5rem;">Procedural audio: how we replaced 200 MB of loops with a 60 KB DSP graph</h3>
+                        <p style="font-size:1rem;">
+                            A meditation app prototype was carrying 200 megabytes of pre-rendered
+                            ambient loops. None of them felt alive. We replaced the entire audio
+                            asset pack with a custom DSP graph that runs on a 2018 iPhone — and never
+                            plays the same minute twice. This is the engineering story behind it.
+                        </p>
+                        <a href="#article-1" class="news-link">Read the full article</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ALL DISPATCHES -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">// archive</span>
+                    <h2 class="section-title">All <span class="text-gradient-2">dispatches</span></h2>
+                    <p class="section-subtitle">Recent essays, release notes, and engineering fragments.</p>
+                </div>
+
+                <div class="grid grid-3 mt-5">
+                    <article class="news-card reveal">
+                        <a href="#article-2" class="news-thumb">
+                            <img src="images/generated/news-2.png" alt="Vault privacy article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Privacy</span>
+                                <span>· 2026-07-08</span>
+                            </div>
+                            <h3>Designing a vault that even we can't read</h3>
+                            <p>Threat models, key derivation, and why we chose Argon2id over PBKDF2 for Ronglix Vault.</p>
+                            <a href="#article-2" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-1">
+                        <a href="#article-3" class="news-thumb">
+                            <img src="images/generated/news-3.png" alt="Design article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Design</span>
+                                <span>· 2026-06-19</span>
+                            </div>
+                            <h3>The case for zen interfaces in productivity software</h3>
+                            <p>Less chrome, more focus. Why our newest release cuts 31% of controls without losing power.</p>
+                            <a href="#article-3" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-2">
+                        <a href="#article-4" class="news-thumb">
+                            <img src="images/generated/news-4.png" alt="Team culture article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Studio</span>
+                                <span>· 2026-06-02</span>
+                            </div>
+                            <h3>How we structure a six-person software studio</h3>
+                            <p>Flat hierarchy, two-week sprints, and an obsession with shipping. Our internal playbook, lightly redacted.</p>
+                            <a href="#article-4" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal">
+                        <a href="#article-5" class="news-thumb">
+                            <img src="images/generated/news-5.png" alt="On-device ML article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Engineering</span>
+                                <span>· 2026-05-17</span>
+                            </div>
+                            <h3>Quantising transformers for the iPhone SE (2020)</h3>
+                            <p>How we got a 110 MB embedding model down to 38 MB — without losing recall on our test set.</p>
+                            <a href="#article-5" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-1">
+                        <a href="#article-6" class="news-thumb">
+                            <img src="images/generated/news-6.png" alt="Workflow release article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Product</span>
+                                <span>· 2026-05-04</span>
+                            </div>
+                            <h3>Ronglix Workflow 2.0: rules that read like English</h3>
+                            <p>The new rule syntax for our local automation app — and why we scrapped the visual builder.</p>
+                            <a href="#article-6" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-2">
+                        <a href="#article-7" class="news-thumb">
+                            <img src="images/generated/news-1.png" alt="EU DSA compliance article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Privacy</span>
+                                <span>· 2026-04-21</span>
+                            </div>
+                            <h3>EU Digital Services Act: what indie studios need to know</h3>
+                            <p>A practical primer on DSA obligations for small software teams — without the legalese.</p>
+                            <a href="#article-7" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal">
+                        <a href="#article-8" class="news-thumb">
+                            <img src="images/generated/news-2.png" alt="Motion article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Design</span>
+                                <span>· 2026-04-09</span>
+                            </div>
+                            <h3>The case for hand-tuned easing curves</h3>
+                            <p>Why our motion library ships 38 carefully named cubic-bézier curves — and no "ease-in-out".</p>
+                            <a href="#article-8" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-1">
+                        <a href="#article-9" class="news-thumb">
+                            <img src="images/generated/news-3.png" alt="Onboarding article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Product</span>
+                                <span>· 2026-03-26</span>
+                            </div>
+                            <h3>Why we deleted our onboarding flow</h3>
+                            <p>A four-screen tutorial that nobody read. The day we shipped an empty launch state instead.</p>
+                            <a href="#article-9" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-2">
+                        <a href="#article-10" class="news-thumb">
+                            <img src="images/generated/news-4.png" alt="Hiring article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Studio</span>
+                                <span>· 2026-03-12</span>
+                            </div>
+                            <h3>What we look for in senior IC engineers</h3>
+                            <p>A non-traditional hiring essay: portfolio over CV, written essays over live coding.</p>
+                            <a href="#article-10" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal">
+                        <a href="#article-11" class="news-thumb">
+                            <img src="images/generated/news-5.png" alt="Encryption article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Engineering</span>
+                                <span>· 2026-02-28</span>
+                            </div>
+                            <h3>AES-GCM vs ChaCha20-Poly1305: when to use which</h3>
+                            <p>Practical guidance from shipping six encrypted products — without the cryptographic hand-waving.</p>
+                            <a href="#article-11" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-1">
+                        <a href="#article-12" class="news-thumb">
+                            <img src="images/generated/news-6.png" alt="Launch article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Product</span>
+                                <span>· 2026-02-14</span>
+                            </div>
+                            <h3>Our first app launch: what worked, what didn't</h3>
+                            <p>A candid post-mortem of the Ronglix Notes 1.0 launch — five months after the fact.</p>
+                            <a href="#article-12" class="news-link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card reveal delay-2">
+                        <a href="#article-13" class="news-thumb">
+                            <img src="images/generated/news-1.png" alt="Ronglix year-in-review article thumbnail" loading="lazy">
+                        </a>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">Studio</span>
+                                <span>· 2026-01-30</span>
+                            </div>
+                            <h3>2025 in review: building Ronglix from a Stirling kitchen table</h3>
+                            <p>Our first full year: six apps shipped, zero breaches, three hires, one studio lease.</p>
+                            <a href="#article-13" class="news-link">Read article</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center mt-5">
+                    <button class="btn btn-outline">
+                        Load older dispatches
+                        <svg width="16" height="16" aria-hidden="true"><use href="images/icons/sprite.svg#i-arrow-right"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBSCRIBE / RSS -->
+        <section class="section" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div class="grid grid-2" style="align-items:center;gap:3rem;">
+                    <div class="reveal">
+                        <span class="section-eyebrow">// subscribe</span>
+                        <h2>Get dispatches by <span class="text-gradient">email</span>.</h2>
+                        <p>
+                            Once a month, no more. Engineering fragments, release notes, and the
+                            occasional essay. Plain text, no tracking pixels, unsubscribe with one click.
+                        </p>
+                    </div>
+
+                    <form class="contact-form reveal delay-1" data-form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sub-name">Name</label>
+                                <input id="sub-name" name="name" type="text" class="form-control" placeholder="Optional" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="sub-email">Email</label>
+                                <input id="sub-email" name="email" type="email" class="form-control" placeholder="you@studio.com" required autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sub-role">Your role</label>
+                            <select id="sub-role" name="role" class="form-control">
+                                <option>Indie developer</option>
+                                <option>Product designer</option>
+                                <option>Studio founder</option>
+                                <option>Curious engineer</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                Subscribe
+                                <svg width="16" height="16" aria-hidden="true"><use href="images/icons/sprite.svg#i-arrow-right"/></svg>
+                            </button>
+                            <div class="form-note">We use this address only for the newsletter. See our <a href="privacy.html">privacy policy</a>.</div>
+                            <div class="form-status" aria-live="polite"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <img class="brand-logo" src="images/logo.svg" alt="">
+                        <span class="brand-text">
+                            <span class="brand-name">RONGLIX</span>
+                            <span class="brand-tag">// systems.online</span>
+                        </span>
+                    </a>
+                    <p class="footer-about mt-2">A focused R&D studio engineering calm, secure, local-first software for the European and global indie market. Founded 2024. Stirling, UK.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Studio</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="advantages.html">Team Advantages</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Products</h5>
+                    <ul>
+                        <li><a href="services.html#workflow">Ronglix Workflow</a></li>
+                        <li><a href="services.html#collector">Ronglix Collector</a></li>
+                        <li><a href="services.html#pulse">Ronglix Pulse</a></li>
+                        <li><a href="services.html#vault">Ronglix Vault</a></li>
+                        <li><a href="services.html#notes">Ronglix Notes</a></li>
+                        <li><a href="services.html#budget">Ronglix Budget</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Get in touch</h5>
+                    <div class="footer-contact-item">
+                        <svg aria-hidden="true"><use href="images/icons/sprite.svg#i-mail"/></svg>
+                        <a href="mailto:contact@ronglix.com">contact@ronglix.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg aria-hidden="true"><use href="images/icons/sprite.svg#i-mail-support"/></svg>
+                        <a href="mailto:support@ronglix.com">support@ronglix.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg aria-hidden="true"><use href="images/icons/sprite.svg#i-pin"/></svg>
+                        <span>University of Stirling Innovation Park, UK</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">© <span data-year>2026</span> Ronglix. All rights reserved. // systems_online</div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html#cookies">Cookies</a>
+                    <a href="privacy.html#children">Children's Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-top" aria-label="Back to top">
+        <svg aria-hidden="true"><use href="images/icons/sprite.svg#i-arrow-right" style="transform:rotate(-90deg)"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
