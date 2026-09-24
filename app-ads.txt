@@ -1,18 +1,2 @@
-# app-ads.txt
-# Ronglix Studio Ltd. — Authorised Sellers for App Advertising
-# https://ronglix.com/app-ads.txt
-#
-# This file lists advertising systems authorised to sell ads on our mobile applications.
-# It complies with the IAB Tech Lab app-ads.txt specification v1.0.
-# Format: <domain>,<publisher ID>,<relationship>,<CERTIFICATION_AUTHORITY_ID>
-#
-# Relationship values:
-#   DIRECT  — we have a direct contractual relationship
-#   RESELLER — we have authorised this party to resell our inventory
-#
-# Once we onboard our first programmatic partner this file will be populated.
-# Until then, all ads served in Ronglix applications are delivered through the
-# mediation layer built into the App and routed directly by us.
-#
-# Last updated: 2026-08-04
-# Contact: contact@ronglix.com
+# google
+google.com, pub-8093697320217225, DIRECT, f08c47fec0942fa0
